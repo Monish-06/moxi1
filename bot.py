@@ -1,3 +1,20 @@
+import threading
+import requests
+import time
+ 
+def keep_alive():
+    while True:
+        try:
+            requests.get("https://scornful-andreana-moxi35-c66f799a.koyeb.app/")
+        except:
+            pass
+        time.sleep(90)  # Ping every 5 minutes
+ 
+threading.Thread(target=keep_alive, daemon=True).start()
+
+
+
+
 # Don't Remove Credit @VJ_Botz
 # Subscribe YouTube Channel For Amazing Bot @Tech_VJ
 # Ask Doubt on telegram @KingVJ01
